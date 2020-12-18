@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="AppPrismTabbedNavBug.Views.TabA"
+             Title="{Binding Title}">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Button Text="Navigate to subpage 1" Command="{prism:NavigateTo TabASubpage1}" />
+        <Button Text="Navigate to subpage 1 force non-modal" Command="{prism:NavigateTo TabASubpage1, UseModalNavigation=False}" />
+    </StackLayout>
+</ContentPage>

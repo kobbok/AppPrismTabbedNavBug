@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="http://prismlibrary.com"
+            xmlns:local="clr-namespace:AppPrismTabbedNavBug.Views"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="AppPrismTabbedNavBug.Views.MainTabbedPage">
+    <TabbedPage.Children>
+        <NavigationPage Title="Tab A">
+            <x:Arguments>
+                <local:TabA />
+            </x:Arguments>
+        </NavigationPage>
+        <local:TabB Title="Tab B" />
+    </TabbedPage.Children>
+</TabbedPage>
